@@ -19,12 +19,17 @@ body {
 }
 header {
   background: url(images/bg-hero-desktop.svg);
-  height: 100h;
+  height: max-content;
   padding: 3em;
   margin-bottom: 5em;
 }
 .logo {
   margin-bottom: 30px;
+}
+header button {
+  border-radius: 20px;
+  padding: 10px 40px;
+  border: none;
 }
 button {
   cursor: pointer;
@@ -46,17 +51,6 @@ button {
 .btn2:hover {
   background-color: hsl(322, 100%, 82%);
 }
-header h2 {
-  font-family: var(--poppins);
-}
-header p {
-  margin: 30px 0;
-}
-header button {
-  border-radius: 20px;
-  padding: 10px 40px;
-  border: none;
-}
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -65,6 +59,13 @@ header button {
 .intro {
   width: 45%;
   margin-top: 70px;
+}
+.intro h2 {
+  font-family: var(--poppins);
+}
+.intro p {
+  margin: 30px 0;
+  color: var(--VeryDarkCyan);
 }
 .header-container img {
   width: 50%;
@@ -81,7 +82,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 2em;
-  box-shadow: 1px 1px 5px;
+  box-shadow: 1px 1px 5px rgb(218, 209, 198);
 }
 .main-container .intro {
   margin: 30px;
@@ -96,17 +97,16 @@ main {
 .main-container img {
   width: 45%;
 }
-.ready{
+.ready {
   background-color: #fff;
   border-radius: 10px;
   padding: 2em 3em;
   width: 400px;
-  box-shadow: 1px 1px 5px;
   text-align: center;
+  margin: auto;
   margin-bottom: -100px;
-  margin-left: 30%;
 }
-.ready h2{
+.ready h2 {
   color: var(--VeryDarkCyan);
   margin-bottom: 20px;
 }
@@ -124,7 +124,7 @@ footer {
   background-color: var(--VeryDarkCyan);
   color: var(--GrayishBlue);
   font-size: 15px;
-  padding: 7em 5em 3em 5em;
+  padding: 8em 5em 3em 5em;
 }
 footer img {
   margin-bottom: 30px;
@@ -166,12 +166,99 @@ footer a {
   float: right;
 }
 .fa-brands {
-  padding: 5px;
+  padding: 10px;
   margin: 3px;
+  font-size: 15px;
   border: 1px solid;
   border-radius: 50%;
   color: #fff;
 }
 .fa-brands:hover {
   color: var(--Pink);
+}
+
+/* media queries */
+@media screen and (max-width: 375px) {
+  header {
+    background: url(./images/bg-hero-mobile.svg);
+    background-repeat: no-repeat;
+    width: auto;
+    margin-bottom: 1em;
+    padding: 10px;
+  }
+  .top-div {
+    width: 100%;
+    padding: 0;
+  }
+  .logo {
+    margin: 0;
+    width: 140px;
+  }
+  .btn1 {
+    padding: 7px 30px;
+  }
+  .btn2 {
+    margin-bottom: 45px;
+    padding: 15px 55px;
+  }
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro {
+    width: 100%;
+    font-size: 21px;
+  }
+  .intro p {
+    font-size: 22px;
+  }
+  .header-container img {
+    width: auto;
+  }
+  main {
+    flex-direction: column;
+  }
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+    margin: 1em 0;
+    padding: 1em 0;
+  }
+  .main-container .intro {
+    width: auto;
+  }
+  .main-container h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .main-container p {
+    color: var(--GrayishBlue);
+    font-size: 20px;
+  }
+  .main-container img {
+    width: 80%;
+  }
+  .ready {
+    width: auto;
+    padding: 2em 1em;
+  }
+  .ready h2 {
+    font-size: 16px;
+  }
+  footer {
+    padding: 8em 1em 3em 1em;
+  }
+  .footer-container {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .col-1 {
+    width: auto;
+  }
+  .col-4 {
+    text-align: center;
+  }
+  .copyright {
+    float: none;
+  }
 }
